@@ -1,0 +1,257 @@
+@import 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,700';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  max-height: 30px;
+  min-width: 100px;
+  padding: 0px;
+  display: flex; 
+  z-index: 1;
+  width: 100%;
+}
+
+.header-content {
+  background-color:#008000;
+  opacity:0.9;
+  display: flex;
+  min-width: 300px;
+  width: 100%;
+  min-height: 125px;
+}
+.logo{
+  transform: scale(0.5);
+  margin-top:0;
+  margin-left: 0;
+  margin-right: 20px;
+  transform-origin: top left;
+  padding: 0;
+  min-height: 80px;
+}
+body {
+  background-color: #fff;
+  font-family: 'Nunito Sans', sans-serif;
+  padding-top: 80px;
+  margin-top: 80px;
+  z-index: -1;
+  font-size: 20px;
+  }
+a {
+  color: #000;
+  text-decoration: none;
+  align-items: right;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  justify-content: flex-end;
+
+}
+
+nav ul li {
+  margin: 35px 10px; 
+  font-size: 20px;
+  min-width: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+#hero{
+  margin-left: 30px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+  /*max-width: 400px;*/
+  margin: 0 auto;
+  /*padding: 20px 10px;*/
+  justify-content: space-between;
+}
+
+.image-container {
+  width: 400px;
+  height: 400px;
+  position:relative;
+}
+
+.gallery img {
+  width: 100%;
+  /*max-width: 400px;*/
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.item {
+  margin: 0px;
+  position: relative;
+} 
+
+.description {
+  background-color: #f7f7f7;
+  padding: 3px;
+  position: absolute;
+  top: 0;
+  right: 0; 
+  width: 300px; 
+  height: 150px;
+  font-size: 15px;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.item:hover .description {
+  opacity: 1;
+}
+.gallery::after {
+  content: "";
+  width: 50px;
+}
+
+#head{
+  margin-top: 10px; margin-bottom:20px;
+}
+.gallery-2 {
+  display: flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+  gap: 2px;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: space-between;
+}
+.choice {
+  display: flex;
+  flex-direction: row;
+  gap: 16px; 
+  align-items: center; 
+}
+.img-container {
+  width: 100px; 
+  height: 100px;
+} 
+.gallery-2 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.choice{
+  display: flex;
+  gap: 16px;
+  align-items: center
+}
+.desc{
+  width: 100%;
+} 
+.desc h2{
+  text-align: left;
+
+}
+.desc .desc-text{
+  text-align: left;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 2px solid #008000;
+  border-radius: 3px;
+  padding-left: 0;
+}
+
+.product > .level {
+  background-color: #ffc40c;
+  color: black;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.product > h2 {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.product > ul {
+  margin: 15px 0;
+  padding-left: 0;
+  list-style: none;
+  
+}
+.product > ul > li {
+  padding: 5px 0;
+}
+
+.product > button {
+  border: 0;
+  margin: 15px 0;
+  background-color: #ff0000;
+  font-weight: 400;
+  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 3px;
+}
+.product > button:hover {
+  background-color: #b22222;
+  transition: background-color 1s;
+}
+/* ensures smooth transition with expansion*/
+@media (min-width:200px) {
+  #Place-an-order {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+   
+  }
+}
+footer {
+  margin-top: 30px;
+  background-color: #008000;
+  padding: 20px;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+  list-style: none;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  color: #000000;
+}
